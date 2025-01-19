@@ -9,6 +9,10 @@ public class CurrentAccount extends Account {
     this.overdraft = 0;
   }
 
+  public float getOverdraft() {
+    return overdraft;
+  }
+
   @Override
   public void withdraw(float amount) {
     if (amount > 0) {
@@ -45,10 +49,10 @@ public class CurrentAccount extends Account {
   @Override
   public String toString() {
     return "CurrentAccount{"
-        + "balance=" + getBalance()
-        + // ", numberOfEntries=" + getNumberOfEntries() +
+        + "balance=" + getBalance() +
+        // ", numberOfEntries=" + getNumberOfEntries() +
         // ", numberOfWithdrawals=" + getNumberOfWithdrawals() +
-        ", totalTransactions =" + (getNumberOfEntries() + getNumberOfWithdrawals())
+        ", totalTransactions=" + (getNumberOfEntries() + getNumberOfWithdrawals())
         // + ", annualRate=" + getAnnualRate()
         + ", monthlyCommission=" + getMonthlyCommission()
         + ", overdraft=" + overdraft

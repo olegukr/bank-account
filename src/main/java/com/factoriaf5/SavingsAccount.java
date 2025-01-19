@@ -48,10 +48,9 @@ public class SavingsAccount extends Account{
                 "balance=" + getBalance() +
                 // ", numberOfEntries=" + getNumberOfEntries() +
                 // ", numberOfWithdrawals=" + getNumberOfWithdrawals() +
-                ", totalTransactions =" + (getNumberOfEntries() + getNumberOfWithdrawals()) +
+                ", totalTransactions=" + (getNumberOfEntries() + getNumberOfWithdrawals()) +
                 // ", annualRate=" + getAnnualRate() +
                 ", monthlyCommission=" + getMonthlyCommission() +
-                ", isActive=" + isActive +
                 '}';
     }
 
