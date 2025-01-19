@@ -1,7 +1,8 @@
 # Bank Account 
 
 ## Overview
-This program models a bank account system with various functionalities, including deposits, withdrawals, and monthly statements. It supports two types of accounts: savings accounts and current accounts, each with specific behaviors and attributes.
+  This program models a bank account system with various functionalities, including deposits, withdrawals, and monthly statements.
+  It supports two types of accounts: savings accounts and current accounts, each with specific behaviors and attributes.
 
 ## Features
 ### General Account Attributes
@@ -10,6 +11,9 @@ This program models a bank account system with various functionalities, includin
 - **Number of withdrawals**: `int` (initial value = 0)
 - **Annual rate (percentage)**: `float`
 - **Monthly commission**: `float` (initial value = 0)
+
+## Constructor
+The Account class has a constructor that initializes the balance and annual rate attributes with values ​​passed as parameters.
 
 ### General Account Methods
 1. **Deposit**: Adds money to the balance.
