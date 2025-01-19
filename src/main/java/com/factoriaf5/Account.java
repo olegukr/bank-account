@@ -59,6 +59,34 @@ public class Account {
       this.monthlyCommission = monthlyCommission;
   }
 
+  public void deposit(float amount) {
+    if (amount > 0) {
+        balance += amount;
+        numberOfEntries++;
+    } else {
+        System.out.println("Deposit amount must be positive.");
+    }
+  }
+
+  public void withdraw(float amount) {
+    if (amount > 0 && amount <= balance) {
+        balance -= amount;
+        numberOfWithdrawals++;
+    } else {
+        System.out.println("Invalid withdrawal amount.");
+    }
+  }
+
+  public void calculateMonthlyInterest() {
+    float monthlyInterest = (annualRate / 12) / 100 * balance;
+    balance += monthlyInterest;
+  }
+
+  public void generateMonthlyStatement() {
+    balance -= monthlyCommission;
+    calculateMonthlyInterest();
+  }
+
   @Override
   public String toString() {
       return "Account{" +

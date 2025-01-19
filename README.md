@@ -36,7 +36,7 @@ The Account class has a constructor that initializes the balance and annual rate
   - `overdraft`: `float` (initial value = 0)
 - **Redefined Methods**:
   1. **Withdraw**: Allows overdrawing, updating the overdraft value if balance goes negative.
-  2. **Consign**: Inherits base functionality. Reduces overdraft if it exists.
+  2. **Deposit**: Inherits base functionality. Reduces overdraft if it exists.
   3. **Monthly Statement**: Inherits base functionality.
   4. **Print**: Returns the balance, monthly fee, total transactions, and overdraft value.
 
