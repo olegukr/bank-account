@@ -61,3 +61,48 @@ Feel free to fork the repository and submit pull requests for any improvements o
 ## License
 This project is licensed under the MIT License.
 
+```mermaid
+classDiagram
+    class Account {
+        - float balance
+        - int numberOfEntries
+        - int numberOfWithdrawals
+        - float annualRate
+        - float monthlyCommission
+        + Account(float balance, float annualRate)
+        + float getBalance()
+        + void setBalance(float balance)
+        + int getNumberOfEntries()
+        + void setNumberOfEntries(int numberOfEntries)
+        + int getNumberOfWithdrawals()
+        + void setNumberOfWithdrawals(int numberOfWithdrawals)
+        + float getAnnualRate()
+        + void setAnnualRate(float annualRate)
+        + float getMonthlyCommission()
+        + void setMonthlyCommission(float monthlyCommission)
+        + void deposit(float amount)
+        + void withdraw(float amount)
+        + void calculateMonthlyInterest()
+        + void generateMonthlyStatement()
+        + String toString()
+    }
+
+    class SavingsAccount {
+        - boolean isActive
+        + SavingsAccount(float balance, float annualRate)
+        + void deposit(float amount)
+        + void withdraw(float amount)
+        + void generateMonthlyStatement()
+        + String toString()
+    }
+
+    class CurrentAccount {
+        - float overdraft
+        + CurrentAccount(float balance, float annualRate)
+        + void withdraw(float amount)
+        + void deposit(float amount)
+        + String toString()
+    }
+
+    Account <|-- SavingsAccount
+    Account <|-- CurrentAccount
